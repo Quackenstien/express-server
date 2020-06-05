@@ -25,6 +25,19 @@ app.get("/notes", function (req, res) {
   res.sendFile(path.join(__dirname, "notes.html"));
 });
 
+//CSS Route
+//==============================================================
+
+app.get("/styles.css", function (req, res) {
+  res.sendFile(path.join(__dirname, "styles.css"));
+});
+
+//API Routes
+//==============================================================
+app.get("/api/notes", function (req, res) {
+  res.json();
+});
+
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function () {
