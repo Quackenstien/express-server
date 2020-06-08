@@ -57,6 +57,8 @@ app.post("/api/notes", function (req, res) {
   fileContent.push(newNote);
 
   fs.writeFileSync("db.json", JSON.stringify(fileContent));
+
+  res.end();
 });
 
 // Starts the server to begin listening
